@@ -1,0 +1,37 @@
+.choice-container {
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  border: 0.1rem solid #68a8ac;
+  background-color: white;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 #68a8ac;
+}
+
+.choice-prefix {
+  padding: 1.5rem 2.5rem;
+  background-color: #56a5eb;
+  color: white;
+}
+
+.choice-text {
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
+}
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
