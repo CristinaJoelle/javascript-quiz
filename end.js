@@ -1,15 +1,28 @@
 const username = document.getElementById("username");
 const saveScoreBtn = document.getElementById("saveScoreBtn");
 const finalScore = document.getElementById("finalScore");
-const highScore = localStorage.getItem("mostRecentScore");
+const mostRecentScore = localStorage.getItem("mostRecentScore");
 
-finalScore.innerText = highScore;
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+console.log(highScores);
 
-username.addEventListener("keyup", () => {
-  console.log(initials.value);
-});
+finalScore.innerText = mostRecentScore;
 
-saveHighScore = (e) => {
-  console.log("clicked the save button!");
-  e.preventDefault();
-};
+function saveHighscore() {
+  var username = initialsEl.value.trim();
+
+  if (username !== "") {
+    var highscores =
+      JSON.parse(window.localStorage.getItem("highscores")) || [];
+
+    var newScore = {
+      score: time,
+      initials: username,
+    };
+
+    highscores.push(newScore);
+    window.localStorage.setItem("highscores", JSON.stringify(highscores));
+
+    window.location.href = "highscores.html";
+  }
+}
