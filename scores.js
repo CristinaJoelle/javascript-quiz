@@ -1,24 +1,26 @@
-function printHighscores() {
-  var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+let scoreEl = document.getElementById("highscores");
 
-  highscores.sort(function (a, b) {
+//function to print highscores
+function printHighscore() {
+  var highscore = JSON.parse(window.localStorage.getItem(timeLeft));
+
+  //print highscpres in descending order
+  highscore.sort(function (a, b) {
     return b.score - a.score;
   });
-
-  for (var i = 0; i < highscores.length; i += 1) {
+  for (var i = 0; i < highscore.length; i += 1) {
+    // create li tag for each high score
     var liTag = document.createElement("li");
-    liTag.textContent = highscores[i].initials + " - " + highscores[i].score;
+    liTag.textContent = highscore[i].initials + " - " + highscore[i].score;
 
-    var olEl = document.getElementById("highscores");
-    olEl.appendChild(liTag);
+    //display on page
+    scoreEl.textContent = printHighscore;
   }
 }
-
+//function to clear highscores
 function clearHighscores() {
   window.localStorage.removeItem("highscores");
   window.location.reload();
 }
 
 document.getElementById("clear").onclick = clearHighscores;
-
-printHighscores();
