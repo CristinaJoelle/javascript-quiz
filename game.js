@@ -80,7 +80,8 @@ getNewQuestion = () => {
   if (availableQuestions.length == 0 || questionCounter >= MAX_QUESTIONS) {
     localStorage.setItem("mostRecentScore", timeLeft);
     clearInterval(timerId);
-    return window.location.assign("/end.html");
+    window.location = "./end.html";
+    return;
   }
   questionCounter++;
   counterText.innerText = questionCounter + "/" + MAX_QUESTIONS;

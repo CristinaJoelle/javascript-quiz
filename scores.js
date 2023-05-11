@@ -14,7 +14,7 @@ function printHighscore() {
     liTag.textContent = highscore[i].initials + " - " + highscore[i].score;
 
     //display on page
-    scoreEl.textContent = printHighscore;
+    scoreEl.textContent = timeLeft;
   }
 }
 //function to clear highscores
@@ -24,3 +24,5 @@ function clearHighscores() {
 }
 
 document.getElementById("clear").onclick = clearHighscores;
+
+printHighscore();
