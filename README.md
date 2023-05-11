@@ -23,3 +23,9 @@ when I enter my initials and press save,
 then my initials are logged into the highscore section.
 
 ## Deployed Site and Screenshots
+
+https://cristinajoelle.github.io/javascript_quiz/
+
+![Screenshot of the start page](/javascript-quiz/screenshots/quiz_start.png)
+![Screenshot of one of the question arrays](/javascript-quiz/screenshots/quiz_question.png)
+![Screenshot of where you can see your highscore and save your initials](/javascript-quiz/screenshots/quiz_score.png)
